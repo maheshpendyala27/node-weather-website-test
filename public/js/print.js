@@ -1,27 +1,27 @@
 
 
-console.log('Loading file....');
+// console.log('Loading file....');
 
 
-fetch('http://puzzle.mead.io/puzzle').then(
-    (response)=>{
-        response.json().then(
-            (data) =>{
-                console.log(data);
-            }
-        )
-    }
-)
+// fetch('http://puzzle.mead.io/puzzle').then(
+//     (response)=>{
+//         response.json().then(
+//             (data) =>{
+//                 console.log(data);
+//             }
+//         )
+//     }
+// )
 
-fetch('http://localhost:3000/weather?address=Philadelphia').then(
-    (response)=>{
-        response.json().then(
-            (data) =>{
-                console.log(data)
-            }
-        )
-    }
-)
+// fetch('http://localhost:3000/weather?address=Philadelphia').then(
+//     (response)=>{
+//         response.json().then(
+//             (data) =>{
+//                 console.log(data)
+//             }
+//         )
+//     }
+// )
 
 const weatherForm = document.querySelector('form');
 const searchLocation = document.querySelector('input');
@@ -35,7 +35,7 @@ weatherForm.addEventListener('submit', (e)=>{
     e.preventDefault();
     const searchValue = searchLocation.value;
     if(searchValue){   
-        fetch('http://localhost:3000/weather?address='+searchValue).then(
+        fetch('/weather?address='+searchValue).then(
     (response)=>{
         response.json().then(
             (data) =>{
